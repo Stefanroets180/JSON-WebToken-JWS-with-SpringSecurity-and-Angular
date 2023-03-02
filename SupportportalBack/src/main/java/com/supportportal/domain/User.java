@@ -1,7 +1,5 @@
 package com.supportportal.domain;
 
-
-
 import javax.persistence.*;
 import java.io.Serializable;
 import java.util.Date;
@@ -11,7 +9,6 @@ public class User implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(nullable = false, updatable = false)
-
     private Long id;
     private String userId;
     private String firstName;
@@ -30,7 +27,7 @@ public class User implements Serializable {
 
     public User(){}
 
-   public User (Long id, String userId, String firstName, String lastName, String username, String password, String email, String profileImageUrl, Date lastLoginDate, Date lastLoginDateDisplay, Date joinDate, String role, String[] authorities, boolean isActive, boolean isNotLocked) {
+    public User(Long id, String userId, String firstName, String lastName, String username, String password, String email, String profileImageUrl, Date lastLoginDate, Date lastLoginDateDisplay, Date joinDate, String role, String[] authorities, boolean isActive, boolean isNotLocked) {
         this.id = id;
         this.userId = userId;
         this.firstName = firstName;
